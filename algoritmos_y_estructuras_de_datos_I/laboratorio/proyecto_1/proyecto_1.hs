@@ -1,5 +1,8 @@
 {-# LANGUAGE NPlusKPatterns #-}
 
+-- Juan Mancini
+-- 2024
+
 -- # Ejercicios
 -- ## 1) programa las siguientes funciones
 -- ### a) esCero :: Int -> Bool, que verifica si un entero es igual a 0.
