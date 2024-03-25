@@ -499,3 +499,72 @@ productoriaGen xs t = cuantGen (*) 1 xs t
 --          240
 --          *Main>  productoriaGen [2,3,5] (*5)
 --          3750
+
+-- ### 13 *
+distanciaEdicion::[Char]->[Char]-> Int
+distanciaEdicion [] ys = length ys
+distanciaEdicion xs [] = length xs
+distanciaEdicion (x:xs) (y:ys) | x == y = distanciaEdicion xs ys
+                               | x /= y = 1 + distanciaEdicion xs ys
+
+                               *Main> distanciaEdicion ['a','b','c'] ['d', 'f', 'g']
+--          3
+--          *Main> distanciaEdicion ['a','b','c'] ['a', 'f', 'g']
+--          2
+--          *Main> distanciaEdicion ['a','b','c'] ['a', 'b', 'c']
+--          0
+
+-- ### 14 *
+
+-- ### 15 *
+
+-- a) f :: (a, b) -> ...
+-- f (x , y) = ...
+-- BIEN TIPADO, pide una tupla, y en la funcion se declara una tupla
+
+-- b) f :: [(a, b)] -> ...
+-- f (a , b) = ...
+-- MAL TIPADO, pide una lista de tuplas, y en la definicion hay una tupla sin concatenar a una lista
+
+-- c) f :: [(a, b)] -> ...
+-- f (x:xs) = ...
+-- BIEN TIPADO, pide una lista, y saca la primera tupla
+
+-- d) f :: [(a, b)] -> ...
+-- f ((x, y) : ((a, b) : xs)) = ...
+-- BIEN TIPADO, pude una lista de tuplas, y se desarmo en una tupla concatenada a una tupla concatenada a una tupla
+
+-- e) f :: [(Int, a)] -> ...
+-- f [(0, a)] = ...
+-- BIEN TIPADO, creo, porque primero es un int, y despues un a, pero una mejor sintaxis seria [(0, _)] si no se usa el a
+
+-- ) f :: [(Int, a)] -> ...
+-- f ((x, 1) : xs) = ...
+-- BIEN TIPADO, bien tipado, es una tupla concatenado a una lista, x es int, y a puede ser cualquier cosa, por lo que puede ser 1
+
+-- g ) f :: (Int -> Int) -> Int -> ...
+-- f a b = ...
+-- BIEN TIPADO, a en este caso es funcion, y b puede ser int
+
+-- h) f :: (Int -> Int) -> Int -> ...
+-- f a 3 = ..
+-- BIEN TIPADO, a puede ser funcion, 3 es Int
+
+-- i) f :: (Int -> Int) -> Int -> ...
+-- f 0 1 2 = ...
+-- MAL TIPADO, hay elementos extra de entrada para f, toma dos, se reciben 3
+
+-- ## 16 * da al menos una definición cuando sea posible.
+
+-- a) f :: (a, b) -> b  
+-- f (x, y) = x
+
+-- b) f :: (a, b) -> c
+-- f (a, b) = a*b
+
+-- c) f :: (a -> b) -> a -> b
+-- f t a = t a
+
+-- d) f :: (a -> b) -> [a] -> [b]
+-- f t [] = []
+-- f t (x:xs) = (t x) : f t xs
