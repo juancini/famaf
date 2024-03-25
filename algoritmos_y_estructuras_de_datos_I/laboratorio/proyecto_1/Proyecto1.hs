@@ -271,7 +271,7 @@ factorial' n = productoria' [1..n] id
 --              *Main> factorial' 11
 --              39916800
 
--- ## 6.g) Programar la función multiplicaPrimos :: [Int] -> Int que calcula el producto 
+-- ### 6.g) Programar la función multiplicaPrimos :: [Int] -> Int que calcula el producto 
 --          de todos los números primos de una lista
 
 esPrimoValor :: Int -> Int
@@ -287,3 +287,215 @@ multiplicaPrimos xs = productoria' xs esPrimoValor
 --              2
 --              *Main> multiplicaPrimos [4,6,8]
 --              1
+
+-- ### 6.h) Programar la función esFib :: Int -> Bool, que dado un entero n, devuelve True
+--          si y sólo si n está en la sucesión de Fibonacci.
+
+--          Ayuda: Realizar una función auxiliar fib :: Int -> Int que dado un n devuelva el
+--          n-ésimo elemento de la sucesión.
+
+fib :: Int -> Int
+fib n
+  | n < 0 = error "El índice debe ser no negativo"
+  | n == 0 = 0
+  | n == 1 = 1
+  | otherwise = fib (n - 1) + fib (n - 2)
+
+-- esto existe porque no me esFib no me dejaba pasar n == fib
+aux :: Int -> Int -> Bool
+aux n m = n == fib m 
+
+esFib :: Int -> Bool
+esFib n = existe' [1..n+1] (aux n)
+
+--       *Main> esFib 3
+--       True
+--       *Main> esFib 2
+--       True
+--       *Main> esFib 1
+--       True
+--       *Main> esFib 13
+--       True
+--       *Main> esFib 12
+--       False
+
+-- ### 6.i) Utilizando la función del apartado anterior, definı́ la función todosFib :: [Int] -> Bool
+--          que dada una lista xs de enteros, devuelva si todos los elementos de la lista pertenecen
+--          (o no) a la sucesión de Fibonacci.
+
+todosFib :: [Int] -> Bool
+todosFib xs = paratodo' xs esFib 
+
+--          *Main> todosFib [1,2,3]
+--          True
+--          *Main> todosFib [1,2,3,4]
+--          False
+--          *Main> todosFib [1,2,3,5]
+--          True
+
+-- ## 7
+-- map: toma una funcion a -> a y una lista [a], y le aplica la funcion a la lista
+-- filter: toma una predicado a -> Bool y una lista[a], retorna aquellas que cumplen el predicado
+
+-- succ n = n+1
+-- map succ [1, -4, 6, 2, -8] -> Nos devulve la lista, pero con los sucesores tq [2, -3, 7, 3, -7]
+
+-- filter esPositivo [1, -4, 6, 2, -8] -> nos devolvera los positivos tq [1, 6, 2]
+
+-- ## 8 Programá una función que dada una lista de números xs, devuelve la lista que resulta de
+--      duplicar cada valor de xs.
+
+--      a) Definila usando recursión.
+duplicaValor :: [Int] -> [Int]
+duplicaValor [] = []
+duplicaValor (x:xs) = (x * 2) : duplicaValor xs 
+
+--          *Main> duplicaValor [2, 3]
+--          [4,6]
+--          *Main> duplicaValor [2, 3, -5]
+--          [4,6,-10]
+
+--      b) Definila utilizando la función map.
+duplicaValor' xs = map (* 2) xs
+
+--          *Main> duplicaValor' [2, 3]
+--          [4,6]
+--          *Main> duplicaValor' [2, 3, -10]
+--          [4,6,-20]
+
+-- ## 9) Programá una función que dada una lista de números xs, calcula una lista que tiene como
+--      elementos aquellos números de xs que son primos.
+
+--      a) Definila usando recursión.
+sonPrimos :: [Int] -> [Int]
+sonPrimos [] = []
+sonPrimos (x:xs) | esPrimo x = x : sonPrimos xs
+                 | not (esPrimo x) = sonPrimos xs
+
+--              *Main> sonPrimos []
+--              []
+--              *Main> sonPrimos [5,6,7]
+--              [5,7]
+
+--      b) Definila utilizando la función filter.
+sonPrimos' :: [Int] -> [Int]
+sonPrimos' xs = filter esPrimo xs
+
+--              *Main> sonPrimos' []
+--              []
+--              *Main> sonPrimos' [5,6,7]
+--              [5,7]
+
+--      c) Revisá tu definición del ejercicio 6g . ¿Se puede mejorar?
+
+multiplicaPrimos' :: [Int] -> Int
+multiplicaPrimos' xs = productoria (filter esPrimo xs) 
+
+--              *Main> multiplicaPrimos' [5,6,7]
+--              35
+--              *Main> multiplicaPrimos' [6,7,8]
+--              7
+
+-- ## 10 a) La función primIgualesA toma un valor y una lista, y calcula el tramo inicial más largo de
+--      la lista cuyos elementos son iguales a ese valor.
+
+primIgualesA :: (Eq a) => a -> [a] -> [a]
+primIgualesA _ [] = []
+primIgualesA n (x:xs) | x == n = x : primIgualesA n xs
+                      | x /= n = []
+
+--              *Main> primIgualesA 3 [3,3,4,1]
+--              [3,3]
+--              *Main> primIgualesA 3 [4,3,3,4,1]
+--              []
+--              *Main> primIgualesA 3 []
+--              []
+--              *Main> primIgualesA 'a' "aaadaa"
+--              "aaa"
+
+--    b)  Programá nuevamente la función utilizando takeWhile.
+primIgualesA' :: (Eq a) => a -> [a] -> [a]
+primIgualesA' n xs = takeWhile (== n) xs
+--              *Main> primIgualesA' 3 [3,3,3,5]
+--              [3,3,3]
+--              *Main> primIgualesA' 3 [4,3,3,4,1]
+--              []
+--              *Main> primIgualesA' 3 []
+--              []
+-- no se porque ahora no anda con char si es la misma especificion que antes
+
+-- ## 11. La función primIguales toma una lista y devuelve el mayor tramo inicial de la lista cuyos
+--      elementos son todos iguales entre sı́. 
+
+primIguales :: (Eq a) => [a] -> [a]
+primIguales [] = []
+primIguales [x] = [x]
+primIguales (x:xs) | x == head (xs) = x : primIguales xs
+                   | x /= (head xs) = x : []
+--              *Main> primIguales [3,3,4,1]
+--              [3,3]
+--              *Main> primIguales [4,3,3,4,1]
+--              [4]
+--              *Main> primIguales []
+--              []
+--              *Main> primIguales "aaadaa"
+--              "aaa"
+
+-- ### 11.b) Usá cualquier versión de primIgualesA para programar primIguales. Está permitido
+--          dividir en casos, pero no usar recursión.
+
+primIguales' :: (Eq a) => [a] -> [a]
+primIguales' [] = []
+primIguales' xs = primIgualesA' (head xs) xs
+--              *Main> primIguales' [3,3,4,1]
+--              [3,3]
+--              *Main> primIguales' [4,3,3,4,1]
+--              [4]
+--              *Main> primIguales' []
+--              []
+--              *Main> primIguales' "aaadaa"
+--              "aaa"
+
+-- ### 12 * definı́ de manera recursiva la función cuantGen (denota la
+--          cuantificación generalizada):
+--              cuantGen :: (b -> b -> b) -> b -> [a] -> (a -> b) -> b
+--              cuantGen op z xs t = ...
+--          que tomando como argumento un operador op, su elemento neutro z, una lista de elementos
+--          xs y una función término t, aplica el operador L a los elementos de la lista, transformados por
+--          la función término.
+
+cuantGen :: (b -> b -> b) -> b -> [a] -> (a -> b) -> b
+cuantGen op z [] t = z
+cuantGen op z (x:xs) t = op (t x) (cuantGen op z xs t)
+
+-- reescribir 4 a) paraTodo
+paratodoGen :: [a] -> (a -> Bool) -> Bool
+paratodoGen xs t = cuantGen (&&) True xs t
+--          *Main> paratodoGen [6] (>0)
+--          True
+--          *Main> paratodoGen [-6] (>0)
+--          False
+
+-- reescribir 4 b) existe
+existeGen :: [a] -> (a -> Bool) -> Bool
+existeGen xs t = cuantGen (||) False xs t
+--          *Main> paratodoGen [6,2,78] (>0)
+--          True
+--          *Main> paratodoGen [-6,-2,-78] (>0)
+--          False
+
+-- reescribir 4 c) sumatoria
+sumatoriaGen :: [a] -> (a -> Int) -> Int
+sumatoriaGen xs t = cuantGen (+) 0 xs t
+--          *Main> sumatoriaGen [1,2,3,-6] (*2)
+--          0
+--          *Main> sumatoriaGen [1,2,3,-2] (*2)
+--          8
+
+-- reescribir 4 d) productoria
+productoriaGen :: [a] -> (a -> Int) -> Int
+productoriaGen xs t = cuantGen (*) 1 xs t
+--          *Main>  productoriaGen [2,3,5] (*2)
+--          240
+--          *Main>  productoriaGen [2,3,5] (*5)
+--          3750
