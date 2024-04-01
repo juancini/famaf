@@ -2,13 +2,13 @@ Supongamos el siguiente ejercicio:
 $$ sum\textunderscore par.n \equiv\langle\sum i : 0 \le i \le n \land par.i : i \rangle $$Su particularidad reside en que en el rango tenemos una conjunción. Para resolver esto debemos de usar una técnica de inducción particular
 # Vamos a hacer inducción sobre _n_
 ## Caso Base _sum_par.0_
-$$sum\textunderscore par.0$$
-$$\equiv \text{Especificacion de sumpar}$$
-$$\langle\sum i : 0 \le i \le 0 \land par.i : i \rangle$$$$\equiv \text{Aritmetica, el rango es i = 0}$$$$\langle\sum i : i = 0 \land par.i : i \rangle$$
+$$\underline{sum\textunderscore par.0}$$
+$$\equiv \text{Especificacion de } sum \textunderscore par$$
+$$\langle\sum i : \underline{0 \le i \le 0} \land par.i : i \rangle$$$$\equiv \text{Aritmetica, el rango es i = 0}$$$$\langle\sum i : \underline{i = 0 \land par.i} : i \rangle$$
 $$\equiv\text{Leibinz 2}$$
-$$\langle\sum i : i = 0 \land par.0 : i \rangle$$
+$$\langle\sum i : \underline{i = 0 \land par.0 : i} \rangle$$
 $$\equiv\text{definicion de par, artimetica, neutro conjuncion}$$
-$$\langle\sum i : i = 0 : i \rangle$$
+$$\underline{\langle\sum i : i = 0 : i \rangle}$$
 $$ \equiv\text{Rango Unitario} $$
 $$ 0 $$
 ## Caso Inductivo _sum_par.(n+1)_
