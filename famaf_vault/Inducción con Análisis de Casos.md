@@ -49,4 +49,13 @@ $$ {sum \textunderscore par.n} + 0 $$
 
 ## Finalmente llegamos a
 $$ sum \textunderscore par.0 \doteq 0$$
-$$ sum \textunderscore par.(n+1) \doteq \begin{cases} {sum \textunderscore par.n} + (n+1) \text{ if } par.(n+1)  \\ {sum \textunderscore par.n} + (n+1) \text{ if } \lnot par.(n+1) \end{cases} $$
+$$ sum \textunderscore par.(n+1) \doteq \begin{cases} {sum \textunderscore par.n} + (n+1) \text{ if } par.(n+1)  \\ {sum \textunderscore par.n} \text{ if } \lnot par.(n+1) \end{cases} $$
+```haskell
+par :: Int -> Bool
+par n = (mod n 2) == 0
+
+sumPar :: Int -> Int
+sumPar 0 = 0
+sumPar n | par n = n + sumPar (n-1)
+		 | otherwise = sumPar (n-1)
+```
