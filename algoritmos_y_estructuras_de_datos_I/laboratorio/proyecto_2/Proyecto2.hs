@@ -1,3 +1,5 @@
+import Distribution.Simple.Utils (xargs)
+import Distribution.SPDX (LicenseId(OLDAP_2_7))
 -- Juan Mancini
 -- 2024
 
@@ -63,17 +65,17 @@ type Altura = Int
 type NumCamiseta = Int
 -- tipos algebráicos sin parámetros (aka enumerados)
 data Zona = Arco | Defensa | Mediocampo | Delantera deriving (Show, Eq, Ord, Bounded)
-data TipoReves = DosManos | UnaMano
-data Modalidad = Carretera | Pista | Monte | BMX
-data PiernaHabil = Izquierda | Derecha
+data TipoReves = DosManos | UnaMano deriving Show
+data Modalidad = Carretera | Pista | Monte | BMX deriving Show
+data PiernaHabil = Izquierda | Derecha deriving Show
 -- siónimo
-type ManoHabil = PiernaHabil
+type ManoHabil = PiernaHabil 
 -- deportista es un tipo algebraico con constructores paramétricos
 data Deportista = Ajedrecista
                 | Ciclista Modalidad
                 | Velocista Altura
                 | Tenista TipoReves ManoHabil Altura -- Constructor con tres argumentos
-                | Futbolista Zona NumCamiseta PiernaHabil Altura -- Constructor con ...
+                | Futbolista Zona NumCamiseta PiernaHabil Altura deriving (Show)-- Constructor con ...
 
 -- # 4. b) ¿Cuál es el tipo del constructor Ciclista? tipo algebraicos enumerado
 
@@ -176,3 +178,83 @@ sonidoCromatico (Nota n Bemol) = sonidoNatural n - 1
 -- que una nota es menor o igual a otra si y solo si el valor de sonidoCromatico para la
 -- primera es menor o igual al valor de sonidoCromatico para la segunda
 
+-- instance Ord NotaMusical where
+--     compare (Nota firstNote firstAlteracion) (Nota secondNote secondAlteracion)
+--         | sonidoCromatico (Nota firstNote firstAlteracion) == sonidoCromatico (Nota secondNote secondAlteracion)
+
+-- # 6. a) a) Definir la funci´on primerElemento que devuelve el primer elemento de una lista no
+--            vacia, o Nothing si la lista es vacia.
+--            primerElemento :: [a] −> Maybe a
+primerElemento :: [a] -> Maybe a
+primerElemento [] = Nothing
+primerElemento (x:xs) = Just x
+
+-- # 7
+data Cola = VaciaC | Encolada Deportista Cola deriving (Show)
+
+-- # 7. a.1)
+atender :: Cola -> Maybe Cola
+atender VaciaC = Nothing
+atender (Encolada n xs) = Just xs
+
+--      *Main> atender (Encolada (Futbolista Arco 23 Derecha 195) (Encolada (Futbolista Delantera 10 Derecha 170) VaciaC))
+--      Just (Encolada (Futbolista Delantera 10 Derecha 170) VaciaC)
+
+--  # 7. a.2)
+-- encolar :: Deportista -> Cola -> Cola
+-- encolar deportista cola = Cola (deportista cola)
+
+-- # 7. a.3)
+busca :: Cola -> Zona -> Maybe Deportista
+busca VaciaC _ = Nothing
+busca (Encolada (Futbolista z n p a) cola) z' | z == z' = Just (Futbolista z n p a)
+                                              | otherwise = busca cola z'
+busca (Encolada _ cola) z' = busca cola z'
+
+--      *Main> let fulbo = Encolada (Futbolista Arco 23 Derecha 195) VaciaC
+--      *Main> busca fulbo Arco 
+--      Just (Futbolista Arco 23 Derecha 195)
+--      *Main> busca fulbo Delantera 
+--      Nothing
+
+-- # 7. b) Se parece a a las listas ngl fr no cap
+
+-- # 8
+data ListaAsoc a b = Vacia | Nodo a b ( ListaAsoc a b ) deriving Show
+-- # 8. a) ¿Como se debe instanciar el tipo ListaAsoc para representar la informacion almacenada
+-- en una guıa telefonica?
+type GuiaTelefonica = ListaAsoc Int String
+-- Tambien podria ser ListaAsoc String String si tuvieramos que usar guiones
+-- ej: "351-777-666"
+
+-- # 8. b) Programa las siguientes funciones:
+--      1) la_long :: ListaAsoc a b -> Int que devuelve la cantidad de datos en una
+--      lista.
+laLong :: ListaAsoc a b -> Int
+laLong Vacia = 0
+laLong (Nodo _ _ lista) = 1 + laLong lista
+
+--          *Main> let guia = Nodo 321777666 "jose" Vacia
+--          *Main> guia
+--          Nodo 321777666 "jose" Vacia
+--          *Main> laLong guia
+--          1
+--          *Main> laLong Vacia
+--          0
+
+--      2) la_concat :: ListaAsoc a b -> ListaAsoc a b -> ListaAsoc a b, que de-
+--      vuelve la concatenaci ́on de dos listas de asociaciones.
+
+--      3) la_agregar :: Eq a => ListaAsoc a b -> a -> b -> ListaAsoc a b, que
+--      agrega un nodo a la lista de asociaciones si la clave no est ́a en la lista, o actualiza
+--      el valor si la clave ya se encontraba.
+
+--      4) la_pares :: ListaAsoc a b -> [(a, b)] que transforma una lista de asocia-
+--      ciones en una lista de pares clave-dato.
+
+--      5) la_busca :: Eq a => ListaAsoc a b -> a -> Maybe b que dada una lista
+--      y una clave devuelve el dato asociado, si es que existe. En caso contrario devuelve
+--      Nothing.
+
+--      6) la_borrar :: Eq a => a -> ListaAsoc a b -> ListaAsoc a b que dada
+--      una clave a elimina la entrada en la lista.
