@@ -255,8 +255,10 @@ laConcat (Nodo a b l) lb = laConcat l (Nodo a b lb)
 --      el valor si la clave ya se encontraba.
 
 laAgregar :: Eq a => ListaAsoc a b -> a -> b -> ListaAsoc a b
-laAgregar (Nodo a b) aKey bKey = []
-laAgregar (Nodo a b : xs) aKey bKey = a == aKey && b == bKey = 
+laAgregar Vacia aK bK = (Nodo aK bK Vacia)
+laAgregar (Nodo a b xs) aK bK | aK == a = (Nodo aK bK xs)
+                              | otherwise = (Nodo a b (laAgregar xs aK bK))
+
 --      4) la_pares :: ListaAsoc a b -> [(a, b)] que transforma una lista de asocia-
 --      ciones en una lista de pares clave-dato.
 laPares :: ListaAsoc a b -> [(a,b)]
@@ -271,9 +273,21 @@ laBusca :: Eq a => ListaAsoc a b -> a -> Maybe b
 laBusca Vacia _ = Nothing
 laBusca (Nodo a b xs) key | a == key = Just b
                           | otherwise = laBusca xs key
+
+--          Main> let arts = Nodo 1 "Dillom" (Nodo 2 "Lali" (Nodo 3 "Steve Wozniak" Vacia))
+--          *Main> laBusca arts 2
+--          Just "Lali"
+--          *Main> laBusca arts 5
+--          Nothing
+
 --      6) la_borrar :: Eq a => a -> ListaAsoc a b -> ListaAsoc a b que dada
 --      una clave a elimina la entrada en la lista.
 laBorrar ::  Eq a => a -> ListaAsoc a b -> ListaAsoc a b
 laBorrar _ Vacia = Vacia
 laBorrar k (Nodo a b l) | k == a = l
-                        | otherwise = (Nodo a b laBorrar k l)
+                        | otherwise = (Nodo a b (laBorrar k l))
+
+--                         *Main> laBorrar 7 arts
+--                          Nodo 1 "Dillom" (Nodo 2 "Lali" (Nodo 3 "Steve Wozniak" Vacia))
+--                          *Main> laBorrar 2 arts
+--                          Nodo 1 "Dillom" (Nodo 3 "Steve Wozniak" Vacia)
