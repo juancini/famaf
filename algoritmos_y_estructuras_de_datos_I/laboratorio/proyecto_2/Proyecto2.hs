@@ -244,17 +244,36 @@ laLong (Nodo _ _ lista) = 1 + laLong lista
 
 --      2) la_concat :: ListaAsoc a b -> ListaAsoc a b -> ListaAsoc a b, que de-
 --      vuelve la concatenaci ́on de dos listas de asociaciones.
+laConcat :: ListaAsoc a b -> ListaAsoc a b -> ListaAsoc a b
+laConcat Vacia Vacia = Vacia
+laConcat Vacia l = l
+laConcat l Vacia = l
+laConcat (Nodo a b l) lb = laConcat l (Nodo a b lb)
 
 --      3) la_agregar :: Eq a => ListaAsoc a b -> a -> b -> ListaAsoc a b, que
 --      agrega un nodo a la lista de asociaciones si la clave no est ́a en la lista, o actualiza
 --      el valor si la clave ya se encontraba.
 
+laAgregar :: Eq a => ListaAsoc a b -> a -> b -> ListaAsoc a b
+laAgregar (Nodo a b) aKey bKey = []
+laAgregar (Nodo a b : xs) aKey bKey = a == aKey && b == bKey = 
 --      4) la_pares :: ListaAsoc a b -> [(a, b)] que transforma una lista de asocia-
 --      ciones en una lista de pares clave-dato.
+laPares :: ListaAsoc a b -> [(a,b)]
+laPares _ = []
+laPares (Nodo a b xs) = (a,b) : laPares xs
 
 --      5) la_busca :: Eq a => ListaAsoc a b -> a -> Maybe b que dada una lista
 --      y una clave devuelve el dato asociado, si es que existe. En caso contrario devuelve
 --      Nothing.
 
+laBusca :: Eq a => ListaAsoc a b -> a -> Maybe b
+laBusca Vacia _ = Nothing
+laBusca (Nodo a b xs) key | a == key = Just b
+                          | otherwise = laBusca xs key
 --      6) la_borrar :: Eq a => a -> ListaAsoc a b -> ListaAsoc a b que dada
 --      una clave a elimina la entrada en la lista.
+laBorrar ::  Eq a => a -> ListaAsoc a b -> ListaAsoc a b
+laBorrar _ Vacia = Vacia
+laBorrar k (Nodo a b l) | k == a = l
+                        | otherwise = (Nodo a b laBorrar k l)
