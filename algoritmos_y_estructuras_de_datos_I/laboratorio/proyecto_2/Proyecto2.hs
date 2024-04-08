@@ -291,3 +291,43 @@ laBorrar k (Nodo a b l) | k == a = l
 --                          Nodo 1 "Dillom" (Nodo 2 "Lali" (Nodo 3 "Steve Wozniak" Vacia))
 --                          *Main> laBorrar 2 arts
 --                          Nodo 1 "Dillom" (Nodo 3 "Steve Wozniak" Vacia)
+
+-- 9) Punto *
+
+data Arbol a = Hoja | Rama (Arbol a) a (Arbol a) deriving Show
+
+-- Programa las siguientes funciones:
+--  a) a_long :: Arbol a -> Int que dado un arbol devuelve la cantidad de datos alma-
+--  cenados.
+
+-- let arbolito = Rama Hoja "Hola Mundo :)" Hoja
+
+aLong :: Arbol a -> Int
+aLong Hoja = 1
+aLong (Rama arb1 _ arb2) = 1 + aLong arb1 + aLong arb2 
+
+--  b) a_hojas :: Arbol a -> Int que dado un arbol devuelve la cantidad de hojas.
+aHojas :: Arbol a -> Int
+aHojas Hoja = 1
+aHojas (Rama arb1 _ arb2) = aLong arb1 + aLong arb2 
+--  c) a_inc :: Num a => Arbol a -> Arbol a que dado un arbol que contiene numeros,
+--  los incrementa en uno.
+aInc :: Num a => Arbol a -> Arbol a
+aInc Hoja = Hoja
+aInc (Rama arb1 a arb2) = (Rama (aInc arb1) (a+1) (aInc arb2))
+
+--        *Main> let arbolDeInts = Rama Hoja 1 Hoja
+--        *Main> aInc arbolDeInts
+--        Rama Hoja 2 Hoja
+
+--  d) a_map :: (a -> b) -> Arbol a -> Arbol b que dada una funcion y un arbol,
+--  devuelve el arbol con la misma estructura, que resulta de aplicar la funcion a cada uno
+--  de los elementos del arbol. Revisa la definicion de la funcion anterior y reprogramala
+--  usando a_map
+aMap :: (a -> b) -> Arbol a -> Arbol b
+aMap _ Hoja = Hoja
+aMap f (Rama arb1 e arb2) = (Rama (aMap f arb1) (f e) (aMap f arb2))
+
+--        *Main> let arbolDeInts = Rama Hoja 2 Hoja
+--        *Main> aMap (*2) arbolDeInts
+--        Rama Hoja 4 Hoja
