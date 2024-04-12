@@ -32,3 +32,7 @@ $⟨Min i : \underline{(0 ≤ i < \#xs \lor i=1) ∧ True} : i ⟩$
 = { Elemento Neutro Conjuncion}
 $⟨Min i : \underline{(0 ≤ i < \#xs \lor i=1)} : i ⟩$
 = {separacion de un termino}
+$\underline{⟨Min i : i=0 : i⟩} min ⟨Min i : 0 ≤ i < \#xs : i⟩$
+= {rango unitario para Min}
+$i min ⟨Min i : 0 ≤ i < \#xs : i⟩$
+={??????? WHERE HIPOTESIS??}
