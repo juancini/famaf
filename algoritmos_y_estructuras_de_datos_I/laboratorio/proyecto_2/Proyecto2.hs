@@ -340,6 +340,17 @@ aMap f (Rama arb1 e arb2) = (Rama (aMap f arb1) (f e) (aMap f arb2))
 -- type VacioABB a = ABB a
 data ABB a = VacioABB | RamaABB (ABB a) a (ABB a) deriving Show
 
+--    b) Definir una funci ́on insertarABB que tome un valor y un  ́arbol binario como entrada y
+--       devuelva un nuevo  ́arbol que contenga el valor insertado en el  ́arbol original. La funci ́on
+--       tiene que tener el siguiente tipado:
+insertarABB :: Ord a => a -> ABB a -> ABB a
+insertarABB n VacioABB = RamaABB VacioABB n VacioABB
+insertarABB n (RamaABB lTree x rTree) | n > x = RamaABB lTree x (insertarABB n rTree)
+                                      | n < x = RamaABB (insertarABB n lTree) x rTree
+                                      | n == x = RamaABB lTree n rTree
+                                      | otherwise = RamaABB lTree n rTree
+
+
 --Extraaa
 igualZona :: Zona -> Zona -> Bool
 igualZona Arco Arco = True
