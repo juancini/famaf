@@ -1,4 +1,4 @@
-Supongamos el siguiente ejercicio:
+La Induccion con Analisis de Casos es un tipo de [[Induccion]], con la particularidad que en su rango o término debemos cumplir ciertas condiciones para calcular el resultado. Esto nos lleva a necesitar ver si estas condiciones se cumplen para poder ser usadas. El resultado final es un programa con guardas. Supongamos el siguiente ejercicio:
 $$ sum\textunderscore par.n \equiv\langle\sum i : 0 \le i \le n \land par.i : i \rangle $$Su particularidad reside en que en el rango tenemos una conjunción. Para resolver esto debemos de usar una técnica de inducción particular
 # Vamos a hacer inducción sobre _n_
 ## Caso Base _sum_par.0_

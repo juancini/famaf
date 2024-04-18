@@ -30,7 +30,7 @@ $\underline{⟨ ∃ as, bs : : y ▷ ys = \underline{as} ⧺ xs ⧺ bs ⟩}$
 ≡ { [[A22. Anidado]], tercero excluido ($as = [ ]$ o $as≠ [ ]$) }
 $⟨ ∃ as : \underline{as = [ ] ∨ as≠ [ ]} : ⟨ ∃ bs : : y ▷ ys = as ⧺ xs ⧺ bs ⟩ ⟩$
 
-≡ { particion de rango }
+≡ { [[A18. Particion de Rango]] }
 $⟨ ∃ as : \underline{as = [ ]} : ⟨ ∃ bs : : y ▷ ys = \underline{as ⧺ xs ⧺ bs} ⟩ ⟩$
 $∨\ ⟨ ∃ as : as≠ [ ] : ⟨ ∃ bs : : y ▷ ys = as ⧺ xs ⧺ bs ⟩ ⟩$
 

@@ -8,91 +8,36 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3f52294eda3484ed",
+            "id": "e1da07e783fa3df4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Derivacion de Busqueda de un Segmento.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0d2d30a0e4b92f35",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Axiomas Cuantificadores/A16. Rango Vacio.md",
+                "file": "dos segmentos iguales consecutivos.md",
                 "mode": "preview",
                 "source": false
               }
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "864b390e407e3267",
+        "type": "tabs",
+        "children": [
           {
-            "id": "5902b3ad5a73cd8d",
+            "id": "cd3e062df81d7182",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Axiomas Cuantificadores/A17. Rango Unitario.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "00b6a7c701038458",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Axiomas Cuantificadores/A18. Particion de Rango.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "59d9815ae00f9bc6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Axiomas Cuantificadores/A20. Termino Constante.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "5080949615c5b262",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Axiomas Cuantificadores/A21. Distributividad.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d235144cb379dc84",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Axiomas Cuantificadores/A20. Termino Constante.md",
+                "file": "Parcial 2022.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -121,7 +66,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Trucos",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -142,7 +87,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 300,
+    "collapsed": true
   },
   "right": {
     "id": "5b32c4a5767928eb",
@@ -158,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Axiomas Cuantificadores/A21. Distributividad.md",
+                "file": "dos segmentos iguales consecutivos.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +121,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Axiomas Cuantificadores/A21. Distributividad.md",
+                "file": "dos segmentos iguales consecutivos.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +144,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Axiomas Cuantificadores/A21. Distributividad.md"
+                "file": "dos segmentos iguales consecutivos.md"
               }
             }
           }
@@ -219,27 +165,36 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "49e0a636857d1955",
+  "active": "e1da07e783fa3df4",
   "lastOpenFiles": [
+    "Parcial 2022.md",
+    "dos segmentos iguales consecutivos.md",
+    "initialSum.xs.md",
+    "Inducción con Análisis de Casos.md",
+    "Induccion.md",
+    "f.xs debe devolver la cantidad de elementos impares en posiciones pares.md",
+    "solucion_parcial_ej_1.md",
+    "Resources - Link Utiles.md",
+    "Anidado y Tercer Excluido.md",
+    "Operador de Conteo.md",
+    "Derivacion de Busqueda de un Segmento.md",
+    "Analisis por Casos para Rango Unitario de Conteo.md",
+    "p2.E15.md",
+    "Untitled.canvas",
+    "Derivacion con segmentos.md",
+    "p2 . E12.md",
+    "Axiomas Cuantificadores/A18. Particion de Rango.md",
+    "Axiomas Calculo Proposicional",
+    "Axiomas Cuantificadores/A22. Anidado.md",
+    "Untitled 1.md",
     "Axiomas Cuantificadores/A20. Termino Constante.md",
     "Axiomas Cuantificadores/A21. Distributividad.md",
     "Axiomas Cuantificadores/A19. Regla del Termino.md",
-    "Axiomas Cuantificadores/A18. Particion de Rango.md",
     "Axiomas Cuantificadores/A17. Rango Unitario.md",
     "Axiomas Cuantificadores/A16. Rango Vacio.md",
-    "Derivacion de Busqueda de un Segmento.md",
-    "Untitled 1.md",
     "Axiomas Cuantificadores",
-    "Inducción con Análisis de Casos.md",
-    "Derivacion con segmentos.md",
-    "Axiomas Cuantificadores/A22. Anidado.md",
-    "Analisis por Casos para Rango Unitario de Conteo.md",
     "A22..md",
     "anidado.md",
-    "p2 . E12.md",
-    "Resources - Link Utiles.md",
-    "Ex 6.C).md",
-    "Operador de Conteo.md",
-    "Welcome.md"
+    "Ex 6.C).md"
   ]
 }

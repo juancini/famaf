@@ -1,4 +1,4 @@
-Esta tecnica sirve para derivar programas funcionales utilizando segmentos de listas en lugar de numeros naturales. Muy utiles para casos como el siguiente
+Esta tecnica sirve para derivar por [[Induccion]] programas funcionales utilizando segmentos de listas en lugar de numeros naturales. Su metodo deriva de la [[Induccion]] Muy utiles para casos como el siguiente
 
 $$ Q.xs.ys = ⟨ ∃ bs : : ys = xs ⧺ bs ⟩$$
 La funcion Q tiene como especificacion "$xs$ es un segmento inicial de $ys$". Prestemos atencion que en nuestra definicion, $ys = xs ⧺ bs$ donde $xs$ es la parte de adelante de $ys$, seguido de un $bs$ que puede ser cualquier otro segmento.
