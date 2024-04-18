@@ -218,6 +218,8 @@ busca (Encolada _ cola) z' = busca cola z'
 --      Nothing
 
 -- # 7. b) Se parece a a las listas ngl fr no cap
+encolar :: Deportista -> Cola -> Cola
+encolar d c = Encolada d c
 
 -- # 8
 data ListaAsoc a b = Vacia | Nodo a b ( ListaAsoc a b ) deriving Show
@@ -331,3 +333,52 @@ aMap f (Rama arb1 e arb2) = (Rama (aMap f arb1) (f e) (aMap f arb2))
 --        *Main> let arbolDeInts = Rama Hoja 2 Hoja
 --        *Main> aMap (*2) arbolDeInts
 --        Rama Hoja 4 Hoja
+
+-- 10) Punto *
+--   a)
+-- type RamaABB a = ABB a -> a -> ABB a 
+-- type VacioABB a = ABB a
+data ABB a = VacioABB | RamaABB (ABB a) a (ABB a) deriving Show
+
+--    b) Definir una funci ́on insertarABB que tome un valor y un  ́arbol binario como entrada y
+--       devuelva un nuevo  ́arbol que contenga el valor insertado en el  ́arbol original. La funci ́on
+--       tiene que tener el siguiente tipado:
+insertarABB :: Ord a => a -> ABB a -> ABB a
+insertarABB n VacioABB = RamaABB VacioABB n VacioABB
+insertarABB n (RamaABB lTree x rTree) | n > x = RamaABB lTree x (insertarABB n rTree)
+                                      | n < x = RamaABB (insertarABB n lTree) x rTree
+                                      | n == x = RamaABB lTree n rTree
+                                      | otherwise = RamaABB lTree n rTree
+
+
+--Extraaa
+igualZona :: Zona -> Zona -> Bool
+igualZona Arco Arco = True
+igualZona Defensa Defensa = True
+igualZona Mediocampo Mediocampo = True
+igualZona Delantera Delantera = True
+igualZona _ _ = False
+
+
+
+borrar :: Cola -> Zona -> Cola
+borrar VaciaC _ = VaciaC
+borrar (Encolada (Futbolista z x y w ) c) z' | igualZona z z' = borrar c z' 
+                                              | otherwise = (Encolada (Futbolista z x y w ) (borrar c z'))
+borrar (Encolada d c) z' = Encolada d (borrar c z')
+
+--Extraaaaaa
+instance Eq Deportista
+  where
+    Ajedrecista == Ajedrecista = True
+    Ciclista Carretera == Ciclista Carretera = True
+    Ciclista Pista == Ciclista Pista = True
+    Ciclista Monte == Ciclista Monte = True
+    Ciclista BMX == Ciclista BMX = True 
+    Tenista _ Izquierda _ == Tenista _ Izquierda _ = True
+    Tenista _ Derecha _ == Tenista _ Derecha _ = True
+    Futbolista Arco _ _ _ == Futbolista Arco _ _ _ = True
+    Futbolista Defensa _ _ _ == Futbolista Defensa _ _ _ = True
+    Futbolista Mediocampo _ _ _ == Futbolista Mediocampo _ _ _ = True
+    Futbolista Delantera _ _ _ == Futbolista Delantera _ _ _ = True
+    _ == _ = False
