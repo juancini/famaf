@@ -8,8 +8,7 @@ Tambien podemos destacar que nuestra especificacion busca la existencia de un se
 ## Derivacion
 Para resolver esta funcion puede estructurarse la derivacion inductiva de varias
 maneras. La mas simple (aunque no necesariamente la mas corta) es considerar los
-cuatro casos posibles (vacıa-vacıa, vacıa-no vacıa, etc.). Dado que la lista vacıa es
-segmento de cualquier otra lista, analizaremos primero el caso en que xs sea vacıa
+cuatro casos posibles (vacıa-vacıa, vacıa-no vacıa, no vacia- vacia, no vacia-no vacia). Dado que la lista vacıa es segmento de cualquier otra lista, analizaremos primero el caso en que xs sea vacıa
 para cualquier valor posible de ys.
 
 ### Caso Base $1 (xs=[], ys)$
@@ -33,7 +32,7 @@ $⟨ ∃ bs : : [ ] = xs ∧ [ ] = bs ⟩$
 ≡ { intercambio }
 $⟨ ∃ bs : [ ] = bs : [ ] = xs ⟩$
 ≡ { rango unitario (o termino constante) }
-$[ ] = xs$
+$[ ] = xs$ 
 
 > Importante ver, que ambos casos bases deben ser iguales para el caso $xs=[], ys=[]$. Ya que si fueran distintos, el programa seria indefinido. Para el caso de ambas listas vacias, hay que chequear que ambos casos bases den lo mismo, en nuetrso caso, el caso base 1 devuelve $True$, y el caso base 2 devuelve $[] = xs => True$ ya que xs es vacio/
 
@@ -50,3 +49,4 @@ $⟨ ∃ bs : : y = x ∧ ys = xs ⧺ bs ⟩$
 $y = x ∧ ⟨ ∃ bs : : ys = xs ⧺ bs ⟩$
 ≡ { HI }
 $y = x ∧ Q.xs.ys$
+

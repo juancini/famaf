@@ -41,6 +41,6 @@ $⟨ ∃cs : : (x▹xs) = ys ⧺ ys ⧺ cs ⟩ \bigvee \underline{⟨∃ as,cs :
 $\underline{⟨∃cs : : (x▹xs) = ys ⧺ ys ⧺ cs ⟩} \bigvee x = a ∧ ⟨∃ as,cs : :  xs = as ⧺ ys ⧺ ys ⧺ cs ⟩$
 
 = { Modularizacion $h.xs.ys = ⟨∃cs : : (x▹xs) = ys ⧺ ys ⧺ cs ⟩$}
-$h.(x▹xs)ys \bigvee x = a ∧ ⟨∃ as,cs : :  xs = as ⧺ ys ⧺ ys ⧺ cs ⟩$
+$h.(x▹xs).ys \bigvee x = a ∧ ⟨∃ as,cs : :  xs = as ⧺ ys ⧺ ys ⧺ cs ⟩$
 
 3. $$hs :: [a] → [a] → Bool$$$$h.xs.ys = ⟨∃cs : : (x▹xs) = ys ⧺ ys ⧺ cs ⟩$$
