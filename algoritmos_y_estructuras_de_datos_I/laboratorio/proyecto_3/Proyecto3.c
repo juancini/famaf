@@ -90,6 +90,43 @@ int smallest (int x, int y, int z, int m) {
   return m;
 }
 
+/* 5. Ciclos ~ Funciones */
+//  5.a
+int decreasei(int i) {
+  while (i != 0)
+  {
+    i -= 1;
+  }
+  return i;
+}
+
+// 5.b.1
+int divideBy(int x, int y, int i) {
+  i = 0;
+  while (x > y)
+  {
+    x -= y;
+    i += 1;
+    printf("Alpha %d: x -> %d, y -> %d\n", i, x, y);
+  }
+  return i;
+}
+
+// 5.b.2
+int niIdeaAmigo(int x, int i, int res) {
+  i = 2;
+  res = 1;
+  printf("Alpha %d: x -> %d, res -> %d\n", i, x, res);
+  while (i < x && res)
+  { 
+    res = res && ((x % i) != 0);
+    i += 1;
+    printf("Alpha %d: x -> %d, res -> %d\n", i, x, res);
+  }
+  return res;
+}
+
+
 int main() {
   printf("Hello Lab!\n");
   
@@ -113,7 +150,7 @@ int main() {
   // printf("division por doble ; %d\n", divideByDouble(x,y));
   // printf("menor que multiplo ; %d\n", lessThanMultiplication(x,y,z));
 
-  // ejercicio 2
+  /* 2. Debugging */
 
   // Ingresar bools
   int b, w;
@@ -130,7 +167,7 @@ int main() {
   // printf("not b && w; %d\n", notTwoValues(b,w)); 
 
 
-  // ejercicio 3
+  /*  3. Asignaciones  */
 
   // llamadas 3.a)
   // setFive(x);
@@ -145,18 +182,40 @@ int main() {
   // sumAndDouble(x,y);
   // doubleAndSum(x,y);
 
-  // ejercicio 4
+  /*   4. Condicionales  */
   int m;
 
   printf("Ingrese m:\n");
   scanf("%d", &m);
-  // 4.a)
+  //  4.a)
   
   exerciseEAndF(x,y);
 
-  //4.b)
+  //  4.b)
   smallest(x,y,z,m);
   // El valor final de _m_ va a ser el mas pequeno entre x,y,z
+
+  /*    5. Ciclos    */
+
+  int i;
+  printf("Ingrese i:\n");
+  scanf("%d", &i);
+
+  int res;
+  printf("Ingrese res:\n");
+  scanf("%d", &res);
+
+  // 5.a
+  printf("Decrementar i: %d\n",decreasei(i));
+
+  // 5.b.1
+  divideBy(x,y,i);
+  // Este programa ve cuantas veces entra y en x, o sea, lo divide
+
+  // 5.b.2
+  niIdeaAmigo(x,i,res);
+  // ENTRA EN LOOP INFINITO AAAAAAAAAAAA
+
   return 0;
 }
 
