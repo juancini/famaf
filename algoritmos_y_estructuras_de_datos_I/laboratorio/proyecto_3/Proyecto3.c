@@ -113,15 +113,15 @@ int divideBy(int x, int y, int i) {
 }
 
 // 5.b.2
-int niIdeaAmigo(int x, int i, int res) {
+int esPrimo(int x, int i, int res) {
   i = 2;
   res = 1;
-  printf("Alpha %d: x -> %d, res -> %d\n", i, x, res);
+  printf("i %d: x -> %d, res -> %d\n", i, x, res);
   while (i < x && res)
   { 
     res = res && ((x % i) != 0);
-    i += 1;
-    printf("Alpha %d: x -> %d, res -> %d\n", i, x, res);
+    i++;
+    printf("i %d: x -> %d, res -> %d\n", i, x, res);
   }
   return res;
 }
@@ -176,6 +176,7 @@ int main() {
 
   // 3.b)
   printf("Assert x: 1, y: 5\n");
+  // quitados para mas facil ejecucion
   // assert(x==1);
   // assert(y==5);
   // setFive(x);
@@ -209,12 +210,15 @@ int main() {
   printf("Decrementar i: %d\n",decreasei(i));
 
   // 5.b.1
-  divideBy(x,y,i);
+  // divideBy(x,y,i);
   // Este programa ve cuantas veces entra y en x, o sea, lo divide
 
   // 5.b.2
-  niIdeaAmigo(x,i,res);
-  // ENTRA EN LOOP INFINITO AAAAAAAAAAAA
+  esPrimo(x,i,res);
+  // Calcula si un numero es primo
+
+  // 5.b.2
+  
 
   return 0;
 }
