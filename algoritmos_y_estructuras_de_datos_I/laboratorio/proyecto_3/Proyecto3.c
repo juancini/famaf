@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include <stdbool.h>
 
 int sumAndAddOne(int x, int y) {
   return x + y + 1;
@@ -34,6 +35,7 @@ int notTwoValues(int b, int w) {
 }
 
 int setFive(int x) {
+  /* Ejercicio 1.a del practico */
   printf("Alpha 0: x -> %d\n", x);
   x = 5;
   printf("Alpha 1: x -> %d\n", x);
@@ -41,6 +43,7 @@ int setFive(int x) {
 }
 
 int sumAndDouble(int x, int y) {
+  /* Ejercicio 1.b del practico */
   printf("Alpha 0: x -> %d, y -> %d\n", x, y);
   x = x + y;
   printf("Alpha 1: x -> %d, y -> %d\n", x, y);
@@ -50,6 +53,7 @@ int sumAndDouble(int x, int y) {
 }
 
 int doubleAndSum(int x, int y) {
+  /* Ejercicio 1.c del practico */
   printf("Alpha 0: x -> %d, y -> %d\n", x, y);
   y = y + y;
   printf("Alpha 1: x -> %d, y -> %d\n", x, y);
@@ -92,7 +96,10 @@ int smallest (int x, int y, int z, int m) {
 
 /* 5. Ciclos ~ Funciones */
 //  5.a
-int decreasei(int i) {
+int decreasei(void) {
+  int i;
+  printf("Ingrese i:\n");
+  scanf("%d", &i);
   while (i != 0)
   {
     i -= 1;
@@ -101,8 +108,17 @@ int decreasei(int i) {
 }
 
 // 5.b.1
-int divideBy(int x, int y, int i) {
-  i = 0;
+int divideBy(void) {
+  int x, y, i;
+  printf("Ingrese x:\n");
+  scanf("%d", &x);
+
+  printf("Ingrese y:\n");
+  scanf("%d", &y);
+
+  printf("Ingrese i:\n");
+  scanf("%d", &i);
+
   while (x > y)
   {
     x -= y;
@@ -113,9 +129,18 @@ int divideBy(int x, int y, int i) {
 }
 
 // 5.b.2
-int esPrimo(int x, int i, int res) {
+int esPrimo(void) {
+  int x, i, res;
+  printf("Ingrese x:\n");
+  scanf("%d", &x);
+
+  printf("Ingrese i:\n");
+  scanf("%d", &i);
+
+  printf("Ingrese res:\n");
+  scanf("%d", &res);
   i = 2;
-  res = 1;
+  res = true;
   printf("i %d: x -> %d, res -> %d\n", i, x, res);
   while (i < x && res)
   { 
@@ -130,7 +155,8 @@ int esPrimo(int x, int i, int res) {
 int main() {
   printf("Hello Lab!\n");
   
-  // ejercicio 1
+  /* 1. Entrada y Salida */
+  
   // Ingresar valores x,y,z
   int x, y, z;
 
@@ -143,56 +169,57 @@ int main() {
   printf("Ingrese z:\n");
   scanf("%d", &z);
 
-  // llamadas ejercicio 1
-  // printf("Sumar y añadir uno; %d\n",sumAndAddOne(x,y));
-  // printf("Multiplicar y Sumar ; %d\n",multiplyAndAdd(x,y,z));
-  // printf("Igual a Modulo ; %d\n", equalsModule(x,y));
-  // printf("division por doble ; %d\n", divideByDouble(x,y));
-  // printf("menor que multiplo ; %d\n", lessThanMultiplication(x,y,z));
+  // Ejercicio 1
+  printf("Sumar y añadir uno; %d\n",sumAndAddOne(x,y));
+  printf("Multiplicar y Sumar ; %d\n",multiplyAndAdd(x,y,z));
+  printf("Igual a Modulo ; %d\n", equalsModule(x,y));
+  printf("division por doble ; %d\n", divideByDouble(x,y));
+  printf("menor que multiplo ; %d\n", lessThanMultiplication(x,y,z));
 
   /* 2. Debugging */
 
-  // Ingresar bools
-  int b, w;
+  // Input
+  bool b, w;
+  int b_temp, w_temp;
 
   printf("Ingrese b:\n");
-  scanf("%d", &b);
+  scanf("%d", &b_temp);
+  b = b_temp;
 
   printf("Ingrese w:\n");
-  scanf("%d", &w);
-
-  // Llamadas
-  // printf("x %% 4 == 0; %d\n", isModuleOfFour(x));
-  // printf("x + y == 0 && y - x == (-1) * z; %d\n", sumEqualsCeroAndSubstractionEqualsNegativeZ(x,y,z)); 
-  // printf("not b && w; %d\n", notTwoValues(b,w)); 
+  scanf("%d", &w_temp);
+  w = w_temp;
+  
+  printf("x %% 4 == 0; %d\n", isModuleOfFour(x));
+  printf("x + y == 0 && y - x == (-1) * z; %d\n", sumEqualsCeroAndSubstractionEqualsNegativeZ(x,y,z)); 
+  printf("not b && w; %d\n", notTwoValues(b,w)); 
 
 
   /*  3. Asignaciones  */
 
-  // llamadas 3.a)
-  // setFive(x);
-  // sumAndDouble(x,y);
-  // doubleAndSum(x,y);
+  // 3.a)
+  setFive(x); // 1.a
+  sumAndDouble(x,y); // 1.b
+  doubleAndSum(x,y); // 1.c
 
   // 3.b)
-  printf("Assert x: 1, y: 5\n");
-  // quitados para mas facil ejecucion
-  // assert(x==1);
-  // assert(y==5);
-  // setFive(x);
-  // sumAndDouble(x,y);
-  // doubleAndSum(x,y);
+  // Estos assert son deliveradamente simples para facilitar correr el codigo
+  // de los ejercicios siguientes.
+  assert(x > 0);
+  assert(y > 0); 
+  setFive(x); // 1.a
+  sumAndDouble(x,y); // 1.b
+  doubleAndSum(x,y); // 1.c
 
   /*   4. Condicionales  */
-  int m;
-
-  printf("Ingrese m:\n");
-  scanf("%d", &m);
   //  4.a)
-  
-  exerciseEAndF(x,y);
+  exerciseEAndF(x,y); // 1.e-f
 
   //  4.b)
+  int m;
+  printf("Ingrese m:\n");
+  scanf("%d", &m);
+  
   smallest(x,y,z,m);
   // El valor final de _m_ va a ser el mas pequeno entre x,y,z
 
@@ -207,17 +234,15 @@ int main() {
   scanf("%d", &res);
 
   // 5.a
-  printf("Decrementar i: %d\n",decreasei(i));
+  printf("Decrementar i: %d\n",decreasei());
 
   // 5.b.1
-  // divideBy(x,y,i);
+  divideBy();
   // Este programa ve cuantas veces entra y en x, o sea, lo divide
 
   // 5.b.2
-  esPrimo(x,i,res);
+  esPrimo();
   // Calcula si un numero es primo
-
-  // 5.b.2
   
 
   return 0;
