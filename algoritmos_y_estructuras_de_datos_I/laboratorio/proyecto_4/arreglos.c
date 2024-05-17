@@ -22,7 +22,7 @@ void pedir_arreglo(int n_max, int a[]){
     for (int i = 0; i < n_max; i++)
     {
         int x;
-        printf("%d:\n", i);
+        printf("%d:", i);
         scanf("%d", &x);
         a[i] = x;
     }
