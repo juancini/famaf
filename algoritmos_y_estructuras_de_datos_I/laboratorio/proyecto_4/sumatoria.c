@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
-#include "arreglos.h"
+#include "arreglos.h" // nos permite traer la funcion de pedir_arreglo
 
 int pedir_entero(char * nombre) {
   int x;
