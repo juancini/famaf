@@ -9,7 +9,7 @@ int pedir_entero(char * nombre) {
   printf("Que valor de %s hoy?\n", nombre);
   scanf("%d", &x);
   return x;
-}
+}  
 
 bool todos_pares(int tam, int a[]) {
     /* recibe un tamaño máximo de arreglo y un arreglo como argumento
@@ -46,12 +46,23 @@ int main() {
     int a[tam];
     pedir_arreglo(tam, a);
 
-    printf("seran todos pares?\n");
-    printf("%d\n", todos_pares(tam, a));
+    int resp_usuario;
+    printf("Queres ver si son pares(p) o impares(i)?");
+    scanf("ingresa p o i %s", &resp_usuario);
 
-    int m = pedir_entero("m");
-    printf("Habra algun multiplo de %d?\n", m);
-    printf("%d\n", existe_multiplo(m, tam, a));
+    if (resp_usuario == "p")
+    {
+        printf("ingresaste 'p'\n");
+        printf("seran todos pares?\n");
+        printf("%d\n", todos_pares(tam, a));
+    } else {
+        printf("ingresaste 'i' (u otra cosa)\n");
+        int m = pedir_entero("m");
+        printf("Habra algun multiplo de %d?\n", m);
+        printf("%d\n", existe_multiplo(m, tam, a));
+    }
+    
+
 
     return 0;
 }
