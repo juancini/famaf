@@ -11,7 +11,7 @@ struct comp_t {
 
 struct comp_t cuantos(int tam, int a[], int elem) {
     struct comp_t resultado;
-    // recorrer el array
+    // La funcion cuantos debe contener un unico ciclo
     int i = 0;
     while (i != tam) {
         if (a[i] == elem) {
@@ -34,6 +34,9 @@ int main() {
     int a[tam];
     pedir_arreglo(tam, a);
 
+    /*  La funcion toma un tamano maximo de arreglo, el arreglo y un entero, y devuelve una
+        estructura con tres enteros que respectivamente indican cuantos elementos menores, iguales
+        o mayores al argumento hay en el arreglo.   */
     struct comp_t return_struct = cuantos(tam, a, element);
     printf("iguales: %d, menores: %d, mayores %d\n", return_struct.iguales, return_struct.menores, return_struct.mayores);
 
