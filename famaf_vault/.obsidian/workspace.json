@@ -18,8 +18,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "eee693569530f4e9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "864b390e407e3267",
@@ -104,7 +117,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dos segmentos iguales consecutivos.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +134,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dos segmentos iguales consecutivos.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +157,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dos segmentos iguales consecutivos.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -165,10 +178,11 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e1da07e783fa3df4",
+  "active": "eee693569530f4e9",
   "lastOpenFiles": [
-    "Parcial 2022.md",
     "dos segmentos iguales consecutivos.md",
+    "Untitled.md",
+    "Parcial 2022.md",
     "initialSum.xs.md",
     "Inducción con Análisis de Casos.md",
     "Induccion.md",
@@ -194,7 +208,6 @@
     "Axiomas Cuantificadores/A16. Rango Vacio.md",
     "Axiomas Cuantificadores",
     "A22..md",
-    "anidado.md",
-    "Ex 6.C).md"
+    "anidado.md"
   ]
 }

@@ -10,8 +10,16 @@ int resto;
 
 struct div_t division(int x, int y){
   struct div_t resultado;
-  resultado.cociente = x / y;
-  resultado.resto = x % y;
+
+  // algoritmo de la division visto en clase
+  int q = 0;
+  while (x >= y) {
+    x = x - y;
+    q++;
+  }
+
+  resultado.cociente = q;
+  resultado.resto = x;
   return resultado;
 }
 
