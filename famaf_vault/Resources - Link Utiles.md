@@ -4,6 +4,9 @@ Acá se pueden encontrar recursos propuestos por los estudiantes, centro de estu
 Click en los titulos para acceder a cada recurso
 
 # FaMAF
+## [Drive Guri](https://drive.google.com/drive/folders/1BxuZzwrdIok67AMM66eEBAbV3m1_RnoB)
+- Links PDF a Parciales Viejos para las materias de la facultad
+
 ## [Drive NUBE MORADA](https://drive.google.com/drive/u/1/folders/13oawKzjnx6OoplCVbaARQssj-0v8UDHJ)
 - Posee links PDF a parciales viejos para todas las materias de la facultad, clasificadas por año
 - Incluye material bibliografico para Matematica y Fisica

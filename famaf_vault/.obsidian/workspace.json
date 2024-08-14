@@ -13,31 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "dos segmentos iguales consecutivos.md",
-                "mode": "preview",
+                "file": "solucion_parcial_ej_1.md",
+                "mode": "source",
                 "source": false
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "864b390e407e3267",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "cd3e062df81d7182",
+            "id": "0b5d3be03b0a4234",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Parcial 2022.md",
+                "file": "Resources - Link Utiles.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -87,8 +82,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "5b32c4a5767928eb",
@@ -104,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "dos segmentos iguales consecutivos.md",
+                "file": "Resources - Link Utiles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "dos segmentos iguales consecutivos.md",
+                "file": "Resources - Link Utiles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "dos segmentos iguales consecutivos.md"
+                "file": "Resources - Link Utiles.md"
               }
             }
           }
@@ -165,20 +159,20 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e1da07e783fa3df4",
+  "active": "0b5d3be03b0a4234",
   "lastOpenFiles": [
     "Parcial 2022.md",
+    "Anidado y Tercer Excluido.md",
+    "Analisis por Casos para Rango Unitario de Conteo.md",
+    "Resources - Link Utiles.md",
     "dos segmentos iguales consecutivos.md",
     "initialSum.xs.md",
     "Inducción con Análisis de Casos.md",
     "Induccion.md",
     "f.xs debe devolver la cantidad de elementos impares en posiciones pares.md",
     "solucion_parcial_ej_1.md",
-    "Resources - Link Utiles.md",
-    "Anidado y Tercer Excluido.md",
     "Operador de Conteo.md",
     "Derivacion de Busqueda de un Segmento.md",
-    "Analisis por Casos para Rango Unitario de Conteo.md",
     "p2.E15.md",
     "Untitled.canvas",
     "Derivacion con segmentos.md",
