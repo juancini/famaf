@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "solucion_parcial_ej_1.md",
+                "file": "Parcial 2022.md",
                 "mode": "source",
                 "source": false
               }
@@ -99,10 +99,7 @@
               "type": "backlink",
               "state": {
                 "file": "Resources - Link Utiles.md",
-                "collapseAll": false,
-                "extraContext": false,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -119,11 +116,7 @@
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            }
-          },
-          {
             "id": "6558c326f86e5942",
-            "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
@@ -139,6 +132,7 @@
               "type": "outline",
               "state": {
                 "file": "Resources - Link Utiles.md"
+
               }
             }
           }
@@ -146,11 +140,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
-  },
   "left-ribbon": {
-    "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -166,7 +156,11 @@
     "Analisis por Casos para Rango Unitario de Conteo.md",
     "Resources - Link Utiles.md",
     "dos segmentos iguales consecutivos.md",
-    "initialSum.xs.md",
+    "Parcial 2022.md",
+    "p2.E15.md",
+    "solucion_parcial_ej_1.md",
+    "Derivacion con segmentos.md",
+    "p2 . E12.md",
     "Inducción con Análisis de Casos.md",
     "Induccion.md",
     "f.xs debe devolver la cantidad de elementos impares en posiciones pares.md",
@@ -175,8 +169,6 @@
     "Derivacion de Busqueda de un Segmento.md",
     "p2.E15.md",
     "Untitled.canvas",
-    "Derivacion con segmentos.md",
-    "p2 . E12.md",
     "Axiomas Cuantificadores/A18. Particion de Rango.md",
     "Axiomas Calculo Proposicional",
     "Axiomas Cuantificadores/A22. Anidado.md",
@@ -188,7 +180,6 @@
     "Axiomas Cuantificadores/A16. Rango Vacio.md",
     "Axiomas Cuantificadores",
     "A22..md",
-    "anidado.md",
-    "Ex 6.C).md"
+    "anidado.md"
   ]
 }
