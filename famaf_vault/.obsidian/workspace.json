@@ -1,33 +1,31 @@
 {
   "main": {
-    "id": "8d312a3dc968a3af",
+    "id": "659d213f508e0ec4",
     "type": "split",
     "children": [
       {
-        "id": "adb1d3012f9859e8",
+        "id": "6cc28ace7fdd1d4b",
         "type": "tabs",
         "children": [
           {
-            "id": "e1da07e783fa3df4",
+            "id": "7ddabaa6b592090c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Parcial 2022.md",
+                "file": "A_y_E_d_D/Analisis por Casos para Rango Unitario de Conteo.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "0b5d3be03b0a4234",
+            "id": "ac6b983a1b0d0727",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "Resources - Link Utiles.md",
-                "mode": "source",
-                "source": false
+                "file": "Algebra/practico_1.md"
               }
             }
           }
@@ -38,15 +36,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "a1f8a0f93105ed5b",
+    "id": "f54ea4e0150f6290",
     "type": "split",
     "children": [
       {
-        "id": "cb50e1fe7ca7c63c",
+        "id": "175bb63228a79a7e",
         "type": "tabs",
         "children": [
           {
-            "id": "49e0a636857d1955",
+            "id": "cca4cdf69f6733c5",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -56,12 +54,12 @@
             }
           },
           {
-            "id": "41b24dd63a543984",
+            "id": "7c63ce0aef5c9602",
             "type": "leaf",
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Trucos",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -71,7 +69,7 @@
             }
           },
           {
-            "id": "3e1dec19090fecf4",
+            "id": "b803a8f97648b701",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -82,24 +80,27 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 401
   },
   "right": {
-    "id": "5b32c4a5767928eb",
+    "id": "6212e83e3ae0a355",
     "type": "split",
     "children": [
       {
-        "id": "6f65e7de24223dcd",
+        "id": "75499829c314661e",
         "type": "tabs",
         "children": [
           {
-            "id": "d6a54140d8342dc0",
+            "id": "8909263bded8976a",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Resources - Link Utiles.md",
+                "file": "Algebra/practico_1.md",
+                "collapseAll": false,
+                "extraContext": false,
                 "sortOrder": "alphabetical",
+                "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
@@ -107,16 +108,20 @@
             }
           },
           {
-            "id": "3e2c79977dda7b63",
+            "id": "6037954688cf09b6",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Resources - Link Utiles.md",
+                "file": "Algebra/practico_1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            "id": "6558c326f86e5942",
+            }
+          },
+          {
+            "id": "794f62c653f65c14",
+            "type": "leaf",
             "state": {
               "type": "tag",
               "state": {
@@ -126,13 +131,12 @@
             }
           },
           {
-            "id": "dc4849f698229fa7",
+            "id": "86caab7dc5f2169a",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Resources - Link Utiles.md"
-
+                "file": "Algebra/practico_1.md"
               }
             }
           }
@@ -140,46 +144,28 @@
       }
     ],
     "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
   "left-ribbon": {
+    "hiddenItems": {
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "0b5d3be03b0a4234",
+  "active": "ac6b983a1b0d0727",
   "lastOpenFiles": [
-    "Parcial 2022.md",
-    "Anidado y Tercer Excluido.md",
-    "Analisis por Casos para Rango Unitario de Conteo.md",
-    "Resources - Link Utiles.md",
-    "dos segmentos iguales consecutivos.md",
-    "Parcial 2022.md",
-    "p2.E15.md",
-    "solucion_parcial_ej_1.md",
-    "Derivacion con segmentos.md",
-    "p2 . E12.md",
-    "Inducción con Análisis de Casos.md",
-    "Induccion.md",
-    "f.xs debe devolver la cantidad de elementos impares en posiciones pares.md",
-    "solucion_parcial_ej_1.md",
-    "Operador de Conteo.md",
-    "Derivacion de Busqueda de un Segmento.md",
-    "p2.E15.md",
-    "Untitled.canvas",
-    "Axiomas Cuantificadores/A18. Particion de Rango.md",
-    "Axiomas Calculo Proposicional",
-    "Axiomas Cuantificadores/A22. Anidado.md",
-    "Untitled 1.md",
-    "Axiomas Cuantificadores/A20. Termino Constante.md",
-    "Axiomas Cuantificadores/A21. Distributividad.md",
-    "Axiomas Cuantificadores/A19. Regla del Termino.md",
-    "Axiomas Cuantificadores/A17. Rango Unitario.md",
-    "Axiomas Cuantificadores/A16. Rango Vacio.md",
-    "Axiomas Cuantificadores",
-    "A22..md",
-    "anidado.md"
+    "A_y_E_d_D/Analisis por Casos para Rango Unitario de Conteo.md",
+    "Algebra/practico_1.md",
+    "Excalidraw",
+    "Algebra",
+    "A_y_E_d_D/Induccion.md",
+    "A_y_E_d_D",
+    "A_y_E_d_D/Algebra"
   ]
 }
