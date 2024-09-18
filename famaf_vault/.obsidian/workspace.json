@@ -30,9 +30,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f38a89afbb6b3454",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algebra/Matrices.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ffaebeef65be8163",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -98,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Sistemas de Ecuaciones.md",
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Sistemas de Ecuaciones.md",
+                "file": "Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Sistemas de Ecuaciones.md"
+                "file": "Untitled.md"
               }
             }
           }
@@ -159,10 +183,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "08363d4e85d34275",
+  "active": "ffaebeef65be8163",
   "lastOpenFiles": [
-    "AyED1/Analisis por Casos para Rango Unitario de Conteo.md",
+    "Algebra/Matrices.md",
+    "Untitled.md",
     "Sistemas de Ecuaciones.md",
+    "AyED1/Analisis por Casos para Rango Unitario de Conteo.md",
     "Algebra",
     "AyED1",
     "AyED1/Parcial 2022.md",
@@ -189,8 +215,6 @@
     "Axiomas Cuantificadores/A21. Distributividad.md",
     "Axiomas Cuantificadores/A19. Regla del Termino.md",
     "Axiomas Cuantificadores/A17. Rango Unitario.md",
-    "Axiomas Cuantificadores/A16. Rango Vacio.md",
-    "Axiomas Cuantificadores",
-    "A22..md"
+    "Axiomas Cuantificadores"
   ]
 }
