@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f38a89afbb6b3454",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra/Matrices.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ffaebeef65be8163",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Untitled.md",
+                "file": "Independecia Lineal y Generacion Lineal.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Untitled.md",
+                "file": "Independecia Lineal y Generacion Lineal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Untitled.md",
+                "file": "Independecia Lineal y Generacion Lineal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Untitled.md"
+                "file": "Independecia Lineal y Generacion Lineal.md"
               }
             }
           }
@@ -163,7 +150,7 @@
   "lastOpenFiles": [
     "Algebra/Matrices.md",
     "Algebra/practico_1.md",
-    "Untitled.md",
+    "Independecia Lineal y Generacion Lineal.md",
     "A_y_E_d_D/Axiomas Cuantificadores/A22. Anidado.md",
     "A_y_E_d_D/Axiomas Cuantificadores/A21. Distributividad.md",
     "A_y_E_d_D/Axiomas Cuantificadores/A20. Termino Constante.md",
