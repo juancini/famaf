@@ -1,4 +1,4 @@
-> Organizacion del Computador 2025
+#Orga 
 
 
 | bin  | base 10 |
