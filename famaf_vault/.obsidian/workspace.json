@@ -4,25 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "c940792fd82bd60c",
+        "id": "b517a9e0f677e0ec",
         "type": "tabs",
         "children": [
           {
-            "id": "4f981fbecbe5d15d",
+            "id": "0bd5ecf74ccb60fd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Organizacion del Computador/Sistemas de Numeración.md",
+                "file": "Organizacion del Computador/Memoria y Logica Programable.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sistemas de Numeración"
+              "title": "Memoria y Logica Programable"
             }
           },
           {
-            "id": "53de4e386ba54c87",
+            "id": "26187032eb6d8161",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -46,6 +46,7 @@
                 "source": false
               },
               "icon": "lucide-file",
+
               "title": "Decodificadores"
             }
           },
@@ -89,6 +90,7 @@
           }
         ],
         "currentTab": 5
+
       }
     ],
     "direction": "vertical"
@@ -249,6 +251,7 @@
     "Organizacion del Computador/Suma y Resta Binaria.md",
     "Untitled",
     "Independecia Lineal y Generacion Lineal.md",
+
     "Organizacion del Computador",
     "Algebra/Matrices.md",
     "Algebra/practico_1.md",
