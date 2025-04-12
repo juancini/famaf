@@ -81,10 +81,14 @@
             "id": "9abfa223ba40e582",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "Organizacion del Computador/Suma y Resta Binaria.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Suma y Resta Binaria"
             }
           }
         ],
@@ -237,15 +241,15 @@
   },
   "active": "9abfa223ba40e582",
   "lastOpenFiles": [
-    "Posiciones Imagen.md",
+    "Organizacion del Computador/Sistemas de Numeración.md",
     "Organizacion del Computador/Organizacion del Computador.md",
     "Organizacion del Computador/Direccionamiento y Lógica de Decodificación de Memorias.md",
+    "Organizacion del Computador/Decodificadores.md",
+    "Posiciones Imagen.md",
     "Pasted image 20250408183441.png",
     "Pasted image 20250408181701.png",
     "Pasted image 20250408181016.png",
     "Pasted image 20250408181010.png",
-    "Organizacion del Computador/Sistemas de Numeración.md",
-    "Organizacion del Computador/Decodificadores.md",
     "Organizacion del Computador/Suma y Resta Binaria.md",
     "Untitled",
     "Independecia Lineal y Generacion Lineal.md",
