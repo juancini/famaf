@@ -1,0 +1,35 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Apr 22 21:44:55 2025
+# Process ID         : 539140
+# Current directory  : /home/juani/Documents/famaf/organizacion_del_computador
+# Command line       : vivado
+# Log file           : /home/juani/Documents/famaf/organizacion_del_computador/vivado.log
+# Journal file       : /home/juani/Documents/famaf/organizacion_del_computador/vivado.jou
+# Running On         : juani-probook
+# Platform           : Zorin
+# Operating System   : Zorin OS 17.3
+# Processor Detail   : AMD Ryzen 7 5825U with Radeon Graphics
+# CPU Frequency      : 2520.935 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16039 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18187 MB
+# Available Virtual  : 11934 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.xpr
+update_compile_order -fileset sources_1
+synth_design -top top -part xc7s50csga324-1 -lint 
+launch_simulation
+source top.tcl
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+open_run impl_1
+close_sim

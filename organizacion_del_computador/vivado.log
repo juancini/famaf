@@ -1,0 +1,252 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Tue Apr 22 21:44:55 2025
+# Process ID         : 539140
+# Current directory  : /home/juani/Documents/famaf/organizacion_del_computador
+# Command line       : vivado
+# Log file           : /home/juani/Documents/famaf/organizacion_del_computador/vivado.log
+# Journal file       : /home/juani/Documents/famaf/organizacion_del_computador/vivado.jou
+# Running On         : juani-probook
+# Platform           : Zorin
+# Operating System   : Zorin OS 17.3
+# Processor Detail   : AMD Ryzen 7 5825U with Radeon Graphics
+# CPU Frequency      : 2520.935 MHz
+# CPU Physical cores : 8
+# CPU Logical cores  : 16
+# Host memory        : 16039 MB
+# Swap memory        : 2147 MB
+# Total Virtual      : 18187 MB
+# Available Virtual  : 11934 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.xpr
+INFO: [Project 1-313] Project file moved from '/home/gvodanovic/Documents/Docencia/FAMAF/OdC/2025/lab1/20250412_gv/OdC2025-Lab1/4bits_alu' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2024.2/data/ip'.
+update_compile_order -fileset sources_1
+synth_design -top top -part xc7s50csga324-1 -lint 
+Command: synth_design -top top -part xc7s50csga324-1 -lint
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 539691
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:04 . Memory (MB): peak = 8043.914 ; gain = 374.227 ; free physical = 2685 ; free virtual = 10055
+---------------------------------------------------------------------------------
+Clean up Linter database...
+INFO: [Synth 8-6157] synthesizing module 'top' [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/top.sv:8]
+INFO: [Synth 8-6157] synthesizing module 'alu' [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:3]
+WARNING: [Synth 8-6104] Input port 'a_in_0' has an internal driver [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:23]
+WARNING: [Synth 8-6104] Input port 'a_in_1' has an internal driver [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:24]
+WARNING: [Synth 8-6104] Input port 'a_in_2' has an internal driver [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:25]
+WARNING: [Synth 8-6104] Input port 'a_in_3' has an internal driver [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:26]
+WARNING: [Synth 8-3848] Net alu_result_0 in module/entity alu does not have driver. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:15]
+WARNING: [Synth 8-3848] Net alu_result_1 in module/entity alu does not have driver. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:16]
+WARNING: [Synth 8-3848] Net alu_result_2 in module/entity alu does not have driver. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:17]
+WARNING: [Synth 8-3848] Net alu_result_3 in module/entity alu does not have driver. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:18]
+WARNING: [Synth 8-3848] Net zero_flag in module/entity alu does not have driver. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:19]
+WARNING: [Synth 8-3848] Net carry_flag in module/entity alu does not have driver. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:20]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (1#1) [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'disp7seg_controller' [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/7seg_controller.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'disp7seg_controller' (2#1) [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/7seg_controller.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'top' (3#1) [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/top.sv:8]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 8114.883 ; gain = 445.195 ; free physical = 2613 ; free virtual = 9986
+---------------------------------------------------------------------------------
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
+| Date         : Tue Apr 22 21:48:34 2025
+| Host         : juani-probook running 64-bit Zorin OS 17.3
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+RTL Linter Report
+
+Table of Contents
+-----------------
+1. Summary
+
+1. Summary
+----------
+
++-----------+----------+--------------+----------+
+| Rule ID   | Severity | # Violations | # Waived |
++-----------+----------+--------------+----------+
+| ASSIGN-5  | WARNING  | 2            | 0        |
+| ASSIGN-9  | WARNING  | 6            | 0        |
+| ASSIGN-10 | WARNING  | 12           | 0        |
++-----------+----------+--------------+----------+
+
+
+WARNING: [Synth 37-126] [ASSIGN-9]Some bits in IO 'alu_result_0' are not set. First unset bit index is 0. 
+RTL Name 'alu_result_0', Hierarchy 'alu', File 'alu.sv', Line 15.
+WARNING: [Synth 37-126] [ASSIGN-9]Some bits in IO 'alu_result_1' are not set. First unset bit index is 0. 
+RTL Name 'alu_result_1', Hierarchy 'alu', File 'alu.sv', Line 16.
+WARNING: [Synth 37-126] [ASSIGN-9]Some bits in IO 'alu_result_2' are not set. First unset bit index is 0. 
+RTL Name 'alu_result_2', Hierarchy 'alu', File 'alu.sv', Line 17.
+WARNING: [Synth 37-126] [ASSIGN-9]Some bits in IO 'alu_result_3' are not set. First unset bit index is 0. 
+RTL Name 'alu_result_3', Hierarchy 'alu', File 'alu.sv', Line 18.
+WARNING: [Synth 37-126] [ASSIGN-9]Some bits in IO 'carry_flag' are not set. First unset bit index is 0. 
+RTL Name 'carry_flag', Hierarchy 'alu', File 'alu.sv', Line 20.
+WARNING: [Synth 37-126] [ASSIGN-9]Some bits in IO 'zero_flag' are not set. First unset bit index is 0. 
+RTL Name 'zero_flag', Hierarchy 'alu', File 'alu.sv', Line 19.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'a_in_0' are not read. First unread bit index is 0. 
+RTL Name 'a_in_0', Hierarchy 'alu', File 'alu.sv', Line 4.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'a_in_1' are not read. First unread bit index is 0. 
+RTL Name 'a_in_1', Hierarchy 'alu', File 'alu.sv', Line 5.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'a_in_2' are not read. First unread bit index is 0. 
+RTL Name 'a_in_2', Hierarchy 'alu', File 'alu.sv', Line 6.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'a_in_3' are not read. First unread bit index is 0. 
+RTL Name 'a_in_3', Hierarchy 'alu', File 'alu.sv', Line 7.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'alu_op_0' are not read. First unread bit index is 0. 
+RTL Name 'alu_op_0', Hierarchy 'alu', File 'alu.sv', Line 12.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'alu_op_1' are not read. First unread bit index is 0. 
+RTL Name 'alu_op_1', Hierarchy 'alu', File 'alu.sv', Line 13.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'alu_op_2' are not read. First unread bit index is 0. 
+RTL Name 'alu_op_2', Hierarchy 'alu', File 'alu.sv', Line 14.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'b_in_0' are not read. First unread bit index is 0. 
+RTL Name 'b_in_0', Hierarchy 'alu', File 'alu.sv', Line 8.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'b_in_1' are not read. First unread bit index is 0. 
+RTL Name 'b_in_1', Hierarchy 'alu', File 'alu.sv', Line 9.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'b_in_2' are not read. First unread bit index is 0. 
+RTL Name 'b_in_2', Hierarchy 'alu', File 'alu.sv', Line 10.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'b_in_3' are not read. First unread bit index is 0. 
+RTL Name 'b_in_3', Hierarchy 'alu', File 'alu.sv', Line 11.
+WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'carry_flag' declared and are not set.
+RTL Name 'carry_flag', Hierarchy 'top', File '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/top.sv', Line 18.
+WARNING: [Synth 37-95] [ASSIGN-5]Found scalar variable(s) 'zero_flag' declared and are not set.
+RTL Name 'zero_flag', Hierarchy 'top', File '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/top.sv', Line 18.
+WARNING: [Synth 37-125] [ASSIGN-10]Some bits in IO 'sw' are not read. First unread bit index is 12. 
+RTL Name 'sw', Hierarchy 'top', File 'top.sv', Line 10.
+INFO: [Synth 37-85] Total of 20 linter message(s) generated.
+INFO: [Synth 37-45] Linter Run Finished!
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 8129.727 ; gain = 460.039 ; free physical = 2617 ; free virtual = 9990
+INFO: [Common 17-83] Releasing license: Synthesis
+13 Infos, 30 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 8129.734 ; gain = 460.047 ; free physical = 2611 ; free virtual = 9985
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1917.179; main = 1578.947; forked = 338.231
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 9054.473; main = 8129.730; forked = 924.742
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/tools/Xilinx/Vivado/2024.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj top_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/7seg_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module disp7seg_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/alu.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.sim/sim_1/behav/xsim'
+xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator v2024.2.0
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2024.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot top_behav xil_defaultlib.top xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.disp7seg_controller
+Compiling module xil_defaultlib.top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot top_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_behav -key {Behavioral:sim_1:Functional:top} -tclbatch {top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 8207.934 ; gain = 78.199 ; free physical = 2679 ; free virtual = 10176
+launch_runs synth_1 -jobs 8
+[Tue Apr 22 21:51:29 2025] Launched synth_1...
+Run output will be captured here: /home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 12
+[Tue Apr 22 21:52:20 2025] Launched impl_1...
+Run output will be captured here: /home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/4bits_alu.runs/impl_1/runme.log
+open_run impl_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8222.094 ; gain = 0.000 ; free physical = 2534 ; free virtual = 10106
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2024.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Read ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8222.094 ; gain = 0.000 ; free physical = 2501 ; free virtual = 10074
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+INFO: [Designutils 20-5722] Start Reading Physical Databases.
+Reading placement.
+Read Netlist Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+Reading placer database...
+Read Device Cache: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+Read PlaceDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+Reading routing.
+Read RouteStorage: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+Read Physdb Files: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+Restored from archive | CPU: 0.010000 secs | Memory: 0.169540 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8685.562 ; gain = 0.000 ; free physical = 2152 ; free virtual = 9725
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:11 . Memory (MB): peak = 9033.754 ; gain = 825.820 ; free physical = 1800 ; free virtual = 9377
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/adder_1bit.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/7seg_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/basic_gates.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/7seg_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/7seg_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/adder_1bit.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/7seg_controller.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/basic_gates.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/basic_gates.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/juani/Documents/famaf/organizacion_del_computador/odc2025-lab1-odc2025_g69/4bits_alu/source/basic_gates.sv:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 23 09:00:25 2025...
