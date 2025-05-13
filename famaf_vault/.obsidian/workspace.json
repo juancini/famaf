@@ -90,9 +90,23 @@
               "icon": "lucide-file",
               "title": "Suma y Resta Binaria"
             }
+          },
+          {
+            "id": "4fd08b4727717f6f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Practico 6 - Ejercicio 6.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Practico 6 - Ejercicio 6"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -239,12 +253,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9abfa223ba40e582",
+  "active": "4fd08b4727717f6f",
   "lastOpenFiles": [
+    "Organizacion del Computador/Practico 6.md",
+    "Practico 6 - Ejercicio 6.md",
+    "Organizacion del Computador/Practico 6 - Ejercicio 4.md",
+    "Organizacion del Computador/Practico 6 - Ejercicio 3.md",
+    "Organizacion del Computador/Practico 6 - Ejercicio 2.md",
+    "Organizacion del Computador/Practico 6 - Ejercicio 1.md",
+    "Organizacion del Computador/Suma y Resta Binaria.md",
     "Organizacion del Computador/Sistemas de Numeración.md",
     "Organizacion del Computador/Organizacion del Computador.md",
     "Organizacion del Computador/Direccionamiento y Lógica de Decodificación de Memorias.md",
     "Organizacion del Computador/Decodificadores.md",
+<<<<<<< Updated upstream
+=======
+    "Untitled Diagram.drawio.png",
+    "Untitled Diagram.drawio 1.png",
+    "Algebra/Independecia Lineal y Generacion Lineal.md",
+>>>>>>> Stashed changes
     "Posiciones Imagen.md",
     "Pasted image 20250408183441.png",
     "Pasted image 20250408181701.png",
@@ -261,6 +288,7 @@
     "A_y_E_d_D/Axiomas Cuantificadores/A20. Termino Constante.md",
     "A_y_E_d_D/Axiomas Cuantificadores/A19. Regla del Termino.md",
     "A_y_E_d_D/Axiomas Cuantificadores/A18. Particion de Rango.md",
+<<<<<<< Updated upstream
     "A_y_E_d_D/Axiomas Cuantificadores/A17. Rango Unitario.md",
     "A_y_E_d_D/Axiomas Cuantificadores/A16. Rango Vacio.md",
     "A_y_E_d_D/solucion_parcial_ej_1.md",
@@ -273,6 +301,8 @@
     "A_y_E_d_D/Parcial 2022.md",
     "A_y_E_d_D/Operador de Conteo.md",
     "A_y_E_d_D/Inducción con Análisis de Casos.md",
+=======
+>>>>>>> Stashed changes
     "A_y_E_d_D/Axiomas Cuantificadores",
     "A_y_E_d_D",
     "Algebra",
