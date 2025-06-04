@@ -1,0 +1,1 @@
+Cuando un valor no esta en un registro, sino que es una constante contreta como `5`, `"hola"` o `Bool`, es un literal

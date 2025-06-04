@@ -1,0 +1,122 @@
+
+main.elf:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000040080000 <end-0x1c>:
+    40080000:	58000106 	ldr	x6, 40080020 <end+0x4>
+    40080004:	580001e0 	ldr	x0, 40080040 <contenido_X0>
+    40080008:	910020c9 	add	x9, x6, #0x8
+    4008000c:	8b1f00ca 	add	x10, x6, xzr
+    40080010:	f800012a 	stur	x10, [x9]
+    40080014:	f8400129 	ldur	x9, [x9]
+    40080018:	8b0a0120 	add	x0, x9, x10
+
+000000004008001c <end>:
+    4008001c:	14000000 	b	4008001c <end>
+    40080020:	40080028 	.inst	0x40080028 ; undefined
+    40080024:	00000000 	udf	#0
+
+Disassembly of section .data:
+
+0000000040080028 <Array>:
+    40080028:	00000064 	udf	#100
+    4008002c:	00000000 	udf	#0
+    40080030:	000000c8 	udf	#200
+    40080034:	00000000 	udf	#0
+    40080038:	0000012c 	udf	#300
+    4008003c:	00000000 	udf	#0
+
+0000000040080040 <contenido_X0>:
+    40080040:	0000000a 	udf	#10
+    40080044:	00000000 	udf	#0
+
+Disassembly of section .debug_line:
+
+0000000000000000 <.debug_line>:
+   0:	0000003b 	udf	#59
+   4:	001d0003 	.inst	0x001d0003 ; undefined
+   8:	01040000 	.inst	0x01040000 ; undefined
+   c:	000d0efb 	.inst	0x000d0efb ; undefined
+  10:	01010101 	.inst	0x01010101 ; undefined
+  14:	01000000 	.inst	0x01000000 ; undefined
+  18:	00010000 	.inst	0x00010000 ; undefined
+  1c:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+  20:	0000732e 	udf	#29486
+  24:	00000000 	udf	#0
+  28:	00000209 	udf	#521
+  2c:	00004008 	udf	#16392
+  30:	21160000 	.inst	0x21160000 ; undefined
+  34:	21212123 	.inst	0x21212123 ; undefined
+  38:	03022321 	.inst	0x03022321 ; undefined
+  3c:	Address 0x000000000000003c is out of bounds.
+
+
+Disassembly of section .debug_info:
+
+0000000000000000 <.debug_info>:
+   0:	0000002a 	udf	#42
+   4:	00000002 	udf	#2
+   8:	01080000 	.inst	0x01080000 ; undefined
+   c:	00000000 	udf	#0
+  10:	40080000 	.inst	0x40080000 ; undefined
+  14:	00000000 	udf	#0
+  18:	40080028 	.inst	0x40080028 ; undefined
+	...
+  24:	00000007 	udf	#7
+  28:	00000060 	udf	#96
+  2c:	Address 0x000000000000002c is out of bounds.
+
+
+Disassembly of section .debug_abbrev:
+
+0000000000000000 <.debug_abbrev>:
+   0:	10001101 	adr	x1, 220 <end-0x4007fdfc>
+   4:	12011106 	and	w6, w8, #0x8000000f
+   8:	1b0e0301 	madd	w1, w24, w14, w0
+   c:	130e250e 	sbfiz	w14, w8, #18, #10
+  10:	00000005 	udf	#5
+
+Disassembly of section .debug_aranges:
+
+0000000000000000 <.debug_aranges>:
+   0:	0000002c 	udf	#44
+   4:	00000002 	udf	#2
+   8:	00080000 	.inst	0x00080000 ; undefined
+   c:	00000000 	udf	#0
+  10:	40080000 	.inst	0x40080000 ; undefined
+  14:	00000000 	udf	#0
+  18:	00000028 	udf	#40
+	...
+
+Disassembly of section .debug_str:
+
+0000000000000000 <.debug_str>:
+   0:	6e69616d 	rsubhn2	v13.8h, v11.4s, v9.4s
+   4:	2f00732e 	.inst	0x2f00732e ; undefined
+   8:	656d6f68 	fnmls	z8.h, p3/m, z27.h, z13.h
+   c:	61756a2f 	.inst	0x61756a2f ; undefined
+  10:	442f696e 	.inst	0x442f696e ; undefined
+  14:	6d75636f 	ldp	d15, d24, [x27, #-176]
+  18:	73746e65 	.inst	0x73746e65 ; undefined
+  1c:	6d61662f 	ldp	d15, d25, [x17, #-496]
+  20:	6f2f6661 	sqshlu	v1.4s, v19.4s, #15
+  24:	6e616772 	umax	v18.8h, v27.8h, v1.8h
+  28:	63617a69 	.inst	0x63617a69 ; undefined
+  2c:	5f6e6f69 	.inst	0x5f6e6f69 ; undefined
+  30:	5f6c6564 	.inst	0x5f6c6564 ; undefined
+  34:	706d6f63 	adr	x3, dae23 <end-0x3ffa51f9>
+  38:	64617475 	.inst	0x64617475 ; undefined
+  3c:	702f726f 	adr	x15, 5ee8b <end-0x40021191>
+  40:	74636172 	.inst	0x74636172 ; undefined
+  44:	2f6f6369 	umlsl	v9.4s, v27.4h, v15.h[2]
+  48:	554d4551 	.inst	0x554d4551 ; undefined
+  4c:	6d65742f 	ldp	d15, d29, [x1, #-432]
+  50:	74616c70 	.inst	0x74616c70 ; undefined
+  54:	4d455165 	.inst	0x4d455165 ; undefined
+  58:	36505f55 	tbz	w21, #10, c40 <end-0x4007f3dc>
+  5c:	00376a45 	.inst	0x00376a45 ; NYI
+  60:	20554e47 	.inst	0x20554e47 ; undefined
+  64:	32205341 	orr	w1, w26, #0x1fffff
+  68:	0038332e 	.inst	0x0038332e ; NYI
