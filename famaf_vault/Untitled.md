@@ -1,0 +1,1 @@
+$$\text{__table\_args\_\_} = \left( \begin{array}{l} \text{Index} \left( \right. \\ \quad \text{"hnsw\_index\_embedding"}, \\ \quad \text{"embedding"}, \\ \quad \text{postgresql\_using="hnsw"}, \\ \quad \text{postgresql\_with={"m": 16, "ef\_construction": 64}}, \\ \quad \text{postgresql\_ops={"embedding": "vector\_l2\_ops"}}, \\ \left. \right) \end{array} \right)$$
